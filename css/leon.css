@@ -1,0 +1,300 @@
+/* // <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name */
+
+/* .work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* start global rules  */
+:root {
+    --main-color:#10cab7;
+    --secondary-color:#2c4755;
+    --section-padding :60px;
+    --section-background:#f6f6f6;
+    --main-duration:0.3s;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+body {
+    font-family: "Work Sans",sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* end global rules  */
+  
+/* start component  */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p{
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+}
+@media (max-width:767px) {
+    .special-heading{
+        font-size: 60px;
+    }
+    .special-heading + p{
+        margin: -20px;
+    }
+}
+/* end component  */
+
+/* start header  */
+.header {
+    padding: 20px;
+    background-color: black;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+.header .links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+
+.header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon{
+    margin-bottom: 5px;
+}
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links .icon span:first-child {
+    width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+}
+.header .links .icon span:last-child {
+    width: 100%; 
+}
+.header .links ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    transition: var(--main-duration);
+}
+.header .links:hover ul {
+    display: block;
+}
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+/* end header  */
+
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 30px 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.footer span{
+    font-weight: bold;
+    color: #e8ab10
+    
+}
+
+/* =====================
+   Subscriptions Section (RTL)
+===================== */
+.subscriptions {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+  direction: rtl;
+}
+
+.subscriptions p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.subscriptions-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.subscription-card {
+  background-color: #181818;
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: right;
+}
+
+.subscription-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+}
+
+.sub-header img {
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  object-fit: contain;
+}
+
+.sub-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.apps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s;
+}
+
+.app:hover {
+  background-color: #2d2d2d;
+}
+
+.app-info {
+  text-align: right;
+}
+
+.app-info span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.download-btn {
+  /* background-color: var(--main-color); */
+  background-color:  #e8ab10;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.download-btn i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.download-btn:hover {
+  background-color: #a27606
+}
+
+@media (max-width: 500px) {
+  .sub-header h3 {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
