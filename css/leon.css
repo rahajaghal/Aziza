@@ -298,3 +298,80 @@ html{
     font-size: 0.8rem;
   }
 }
+
+.apps-title {
+  font-weight: 600;
+  color: #10cab7;
+  margin: 10px 0 15px;
+  font-size: 1.1rem;
+  border-right: 3px solid  #e8ab10;
+  padding-right: 8px;
+}
+
+/* ✅ تنسيق خاص بشاشات التلفاز (أكبر من 1600px) */
+@media (min-width: 1600px) {
+  /* الشبكة تعرض اشتراكين فقط */
+  .subscriptions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  /* تكبير وتجميل البطاقات */
+  .subscription-card {
+    padding: 50px;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    background: rgba(20, 20, 20, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  /* تأثير عند تمرير الماوس */
+  .subscription-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  /* تكبير الصور والعناوين */
+  .sub-header img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .sub-header h3 {
+    font-size: 2rem;
+  }
+
+  .app-info strong {
+    font-size: 1.3rem;
+  }
+
+  .app-info span {
+    font-size: 1.1rem;
+  }
+
+  .download-btn {
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+
+  /* ✅ الخلفية بتدرج لوني أنيق */
+  body {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1b1b2f 40%, #2a2a3e 100%);
+    color: #fff;
+  }
+
+  .subscriptions p {
+    font-size: 1.3rem;
+    color: #ddd;
+  }
+
+  .special-heading {
+    color:  #a27606;
+  }
+}
+
+
+
