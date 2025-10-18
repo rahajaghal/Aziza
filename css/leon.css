@@ -308,7 +308,7 @@ html{
   padding-right: 8px;
 }
 /* ✅ تنسيق خاص بشاشات التلفاز (أكبر من 1600px) */
-@media (min-width: 1600px) {
+@media (min-width: 1350px) {
   /* الشبكة تعرض 3 اشتراكات فقط */
   .subscriptions-grid {
     grid-template-columns: repeat(3, 1fr);
