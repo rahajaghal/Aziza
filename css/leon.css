@@ -1,184 +1,120 @@
-/* // <weight>: Use a value from 100 to 900
-// <uniquifier>: Use a unique and descriptive class name */
-
-/* .work-sans-<uniquifier> {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
-/* start global rules  */
+/* ============================
+   Global Variables & Settings
+============================ */
 :root {
-    --main-color:#10cab7;
-    --secondary-color:#2c4755;
-    --section-padding :60px;
-    --section-background:#f6f6f6;
-    --main-duration:0.3s;
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.3s;
 }
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-     box-sizing: border-box;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 body {
-    font-family: "Work Sans",sans-serif;
-}
-html{
-    scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
+  background-color: #fff;
+  color: #111;
 }
 
-.container{
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+html {
+  scroll-behavior: smooth;
 }
-@media (min-width:768px) {
-    .container{
-        width: 750px;
-    }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media (min-width:992px) {
-    .container{
-        width: 970px;
-    }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
-@media (min-width:1200px) {
-    .container{
-        width: 1170px;
-    }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
-/* end global rules  */
-  
-/* start component  */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* ============================
+   Components
+============================ */
 .special-heading {
-    color: #ebeced;
-    font-size: 100px;
-    text-align: center;
-    font-weight: 800;
-    letter-spacing: -3px;
-    margin: 0;
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
 }
 
-.special-heading + p{
-    margin: -30px 0 0;
-    font-size: 20px;
-    text-align: center;
-    color: #797979;
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
 }
-@media (max-width:767px) {
-    .special-heading{
-        font-size: 60px;
-    }
-    .special-heading + p{
-        margin: -20px;
-    }
-}
-/* end component  */
 
-/* start header  */
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin: -20px;
+  }
+}
+
+/* ============================
+   Header
+============================ */
 .header {
-    padding: 20px;
-    background-color: black;
+  padding: 20px;
+  background-color: black;
 }
+
 .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .header .logo {
-    width: 60px;
-}
-.header .links {
-    position: relative;
-}
-.header .links:hover .icon span:nth-child(2){
-    width: 100%;
+  width: 60px;
 }
 
-.header .links .icon{
-    width: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-.header .links .icon{
-    margin-bottom: 5px;
-}
-.header .links .icon span {
-    background-color: #333;
-    margin-bottom: 5px;
-    height: 2px;
-}
-.header .links .icon span:first-child {
-    width: 100%;
-}
-.header .links .icon span:nth-child(2) {
-    width: 60%;
-    transition: var(--main-duration);
-}
-.header .links .icon span:last-child {
-    width: 100%; 
-}
-.header .links ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0;
-    background-color: #f6f6f6;
-    position: absolute;
-    right: 0;
-    min-width: 200px;
-    top: calc(100% + 15px);
-    display: none;
-    z-index: 1;
+/* ============================
+   Footer
+============================ */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 30px 10px;
+  font-size: 18px;
+  text-align: center;
 }
 
-.header .links ul::before {
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #f6f6f6 transparent;
-    position: absolute;
-    right: 5px;
-    top: -20px;
+.footer span {
+  font-weight: bold;
+  color: #e8ab10;
 }
 
-.header .links ul li a {
-    display: block;
-    padding: 15px;
-    color: #333;
-    text-decoration: none;
-    transition: var(--main-duration);
-}
-.header .links:hover ul {
-    display: block;
-}
-.header .links ul li a:hover {
-    padding-left: 25px;
-}
-.header .links ul li:not(:last-child) a {
-    border-bottom: 1px solid #ddd;
-}
-/* end header  */
-
-
-.footer{
-    background-color: black;
-    color: white;
-    padding: 30px 10px;
-    font-size: 18px;
-    text-align: center;
-}
-.footer span{
-    font-weight: bold;
-    color: #e8ab10
-    
-}
-
-/* =====================
-   Subscriptions Section (RTL)
-===================== */
+/* ============================
+   Subscriptions Section
+============================ */
 .subscriptions {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -204,15 +140,18 @@ html{
   padding: 25px;
   color: #fff;
   transition: 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: right;
 }
 
 .subscription-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* ============================
+   Subscription Header
+============================ */
 .sub-header {
   display: flex;
   align-items: center;
@@ -224,15 +163,37 @@ html{
 .sub-header img {
   width: 50px;
   height: 50px;
-  /* border-radius: 50%; */
   object-fit: contain;
 }
 
-.sub-header h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+/* 🔹 Title & Price Layout */
+.title-price {
+  display: flex;
+  justify-content: space-between; /* RTL: name on right, price on left */
+  align-items: center;
+  width: 100%;
 }
 
+.title-price h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e8ab10;
+  background-color: rgba(255, 215, 0, 0.1);
+  padding: 4px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* ============================
+   Apps Section
+============================ */
 .apps {
   display: flex;
   flex-direction: column;
@@ -264,8 +225,7 @@ html{
 }
 
 .download-btn {
-  /* background-color: var(--main-color); */
-  background-color:  #e8ab10;
+  background-color: #e8ab10;
   color: white;
   border: none;
   border-radius: 8px;
@@ -279,24 +239,8 @@ html{
   text-decoration: none;
 }
 
-.download-btn i {
-  margin-left: 0;
-  margin-right: 5px;
-}
-
 .download-btn:hover {
-  background-color: #a27606
-}
-
-@media (max-width: 500px) {
-  .sub-header h3 {
-    font-size: 1rem;
-  }
-
-  .download-btn {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-  }
+  background-color: #a27606;
 }
 
 .apps-title {
@@ -304,14 +248,206 @@ html{
   color: #10cab7;
   margin: 10px 0 15px;
   font-size: 1.1rem;
-  border-right: 3px solid  #e8ab10;
+  border-right: 3px solid #e8ab10;
   padding-right: 8px;
 }
-/* ✅ تنسيق خاص بشاشات التلفاز (أكبر من 1600px) */
+
+/* ============================
+   Extra Section (IPTV + Free Apps)
+============================ */
+.extra-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+  direction: rtl;
+  background-color: #fff;
+}
+
+.extra-section p {
+  color: #666;
+}
+
+/* 🔹 2 columns layout */
+.extra-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.extra-card {
+  background-color: #181818;
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+  text-align: right;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.extra-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.extra-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #e8ab10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.extra-title i {
+  color: #e8ab10;
+}
+
+/* 🔹 Apps inside extra cards */
+.extra-card .app {
+  background-color: #222;
+}
+
+.extra-card .app:hover {
+  background-color: #2d2d2d;
+}
+
+.extra-card .app-info span {
+  color: #666;
+}
+
+.extra-card .download-btn {
+  background-color: #e8ab10;
+}
+
+.extra-card .download-btn:hover {
+  background-color: #e8ab10;
+}
+
+/* 🔹 Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .extra-grid {
+    grid-template-columns: 1fr;
+  }
+  .sub-header h3 {
+    font-size: 1rem;
+  }
+  .download-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Large screen layout for subscription grid */
 @media (min-width: 1350px) {
-  /* الشبكة تعرض 3 اشتراكات فقط */
   .subscriptions-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
   }
 }
+/* ============================
+   App Icons inside Extra Section
+============================ */
+.app-info-with-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-info-with-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.app-info-with-img .text-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.contact-section {
+  margin-top: 40px;
+  padding: 20px;
+  /* background-color: #f7f7f7; */
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-section .special-heading {
+  margin-bottom: 10px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* WhatsApp Green */
+.contact-link.whatsapp {
+  background-color: #25d366;
+}
+
+.contact-link.whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* Facebook Blue */
+.contact-link.facebook {
+  background-color: #1877f2;
+}
+
+.contact-link.facebook:hover {
+  background-color: #145dbf;
+}
+
+/* TikTok Black */
+.contact-link.tiktok {
+  background-color: #000000;
+  color: white;
+}
+
+.contact-link.tiktok:hover {
+  background-color: #333333;
+}
+
+/* Phone - Dark Gray */
+.contact-link.phone {
+  background-color: #555555;
+}
+
+.contact-link.phone:hover {
+  background-color: #333333;
+}
+
+/* Icons sizing */
+.contact-link i {
+  font-size: 1.3rem;
+}
+.contact-link.email {
+  background-color: #0072c6; /* blue email color */
+}
+
+.contact-link.email:hover {
+  background-color: #005fa3;
+}
+
+
