@@ -95,6 +95,25 @@ html {
 .header .logo {
   width: 60px;
 }
+.contact-whatsapp {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  direction: rtl; /* Because your text is Arabic */
+}
+
+.contact-whatsapp a {
+  color: #25d366; /* WhatsApp green */
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.contact-whatsapp a:hover {
+  color: #1ebe57;
+}
 
 /* ============================
    Footer
