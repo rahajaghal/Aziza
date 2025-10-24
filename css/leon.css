@@ -457,6 +457,18 @@ html {
   background-color: #005fa3;
 }
 
+/* QR Code style */
+.contact-link.qr {
+  background-color: #000000; /* Black background for QR */
+  color: #ffffff;
+}
+
+.contact-link.qr svg {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+}
+
 /* ============================
    Footer
 ============================ */
