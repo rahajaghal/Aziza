@@ -17,7 +17,7 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  background-color: #2d2d2d;
+  background-color: #0a0a0a;
   color: #111;
 }
 
@@ -265,7 +265,7 @@ html {
   padding-bottom: var(--section-padding);
   text-align: center;
   direction: rtl;
-  background-color: #2d2d2d;
+  background-color: #0a0a0a;
 }
 
 .extra-section p {
