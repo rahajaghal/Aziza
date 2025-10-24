@@ -115,21 +115,6 @@ html {
   color: #1ebe57;
 }
 
-/* ============================
-   Footer
-============================ */
-.footer {
-  background-color: black;
-  color: white;
-  padding: 30px 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.footer span {
-  font-weight: bold;
-  color: #e8ab10;
-}
 
 /* ============================
    Subscriptions Section
@@ -404,7 +389,7 @@ html {
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .contact-link {
@@ -467,6 +452,22 @@ html {
 
 .contact-link.email:hover {
   background-color: #005fa3;
+}
+
+/* ============================
+   Footer
+============================ */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 30px 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer span {
+  font-weight: bold;
+  color: #e8ab10;
 }
 
 
