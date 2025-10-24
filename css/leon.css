@@ -17,7 +17,7 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  background-color: #fff;
+  background-color: #2d2d2d;
   color: #111;
 }
 
@@ -67,6 +67,7 @@ html {
   font-size: 20px;
   text-align: center;
   color: #797979;
+  padding-top: 30px;
 }
 
 @media (max-width: 767px) {
@@ -264,7 +265,7 @@ html {
   padding-bottom: var(--section-padding);
   text-align: center;
   direction: rtl;
-  background-color: #fff;
+  background-color: #2d2d2d;
 }
 
 .extra-section p {
@@ -371,6 +372,8 @@ html {
   flex-direction: column;
   text-align: right;
 }
+
+/* contact section  */
 
 .contact-section {
   margin-top: 40px;
